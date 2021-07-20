@@ -15,10 +15,20 @@ class WordForm extends Component {
     return output
   }
 
+  gameList= () => {
+    let gameOption = []
+    for(let i = 0; i< madlibs.length; i++){
+      gameOption.push(<select><option value={madlibs[i].title}></option></select>)
+
+    }
+    return gameOption
+  }
+
   render() {
     return (
       <div>
         {this.inputForm()}
+        {this.gameList()}
       </div>
     )
   }
