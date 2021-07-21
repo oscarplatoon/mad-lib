@@ -9,17 +9,19 @@ class App extends Component {
     madlibs: MadLibs,
     selectedMadLib: MadLibs[0]
   }
-
+  //Event handler
   onWordInputChange = (key, value, index) => {
     const newState = {
       ...this.state
     }
+   
     newState.selectedMadLib.words[index] = {
       ...newState.selectedMadLib.words[index],
       value: value
     }
     this.setState(newState)
   }
+ 
   render() {
     return (
       <div className="App">
